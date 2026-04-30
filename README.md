@@ -2,6 +2,7 @@
 
 ## Overview
 **Dataset: https://www.kaggle.com/datasets/ismailperacha/nba-tanking-teams-2019-2025 (Own)**
+
 The NBA changed its draft lottery system in 2019 to discourage tanking (intentionally losing for better draft picks).
 
 This project analyzes whether those changes actually reduced the benefits of tanking by examining lottery teams and their outcomes over the next few seasons.
