@@ -1,86 +1,87 @@
-# NBA Tanking Analysis (Post-2019 Lottery Reform)
+# NBA Lottery Reform & Team Recovery Analysis
 
 ## Overview
+
 **Dataset: https://www.kaggle.com/datasets/ismailperacha/nba-tanking-teams-2019-2025 (Own)**
 
-The NBA changed its draft lottery system in 2019 to discourage tanking (intentionally losing for better draft picks).
+The NBA has explored changes to its draft lottery system to discourage tanking, including proposals to further flatten lottery odds.
 
-This project analyzes whether those changes actually reduced the benefits of tanking by examining lottery teams and their outcomes over the next few seasons.
+A common concern is that reducing draft advantages for the worst teams could make it harder for them to rebuild, potentially trapping them at the bottom of the standings.
+
+This project examines whether that concern is valid.
 
 ---
 
 ## Key Question
-> After the 2019 lottery reform, does finishing with the worst record still help teams improve faster?
+> Do bottom NBA teams get stuck at the bottom, or do they recover within a reasonable timeframe under the current lottery system?
 
 ---
 
 ## Approach
-- Focus on **lottery teams (seeds 1–14)** from 2018–19 onward  
-- Group teams by level of tanking:
-  - **Bottom 3** (extreme tanking)
+- Focus on **NBA lottery teams (seeds 1–14)** from 2018–19 onward  
+- Group teams into tiers:
+  - **Bottom 3** (worst records)
   - **Mid Lottery**
   - **Fringe Lottery**
-- Measure outcomes using:
-  - **Time to playoffs**
-  - **Playoff appearances within 3 years**
-  - **Draft position vs future performance**
+- Track how long it takes teams to return to the playoffs
 
 ---
 
 ## Key Findings
 
-- **Worst teams do not recover faster**  
-  Bottom 3 teams take longer to reach the playoffs (~2.6 years) than mid and fringe lottery teams (~2.0 years)
+- **Most teams recover quickly**  
+  The majority of teams return to the playoffs within **1–3 years**
 
-- **Tanking does not accelerate success**  
-  Extreme losing does not improve short-term outcomes
+- **Bottom teams are slower—but not stuck**  
+  Bottom 3 teams take ~**2.6 years** on average, compared to ~**1.9 years** for other lottery teams
 
-- **Teams are not stuck at the bottom**  
-  Even the worst teams typically recover within a few years
+- **Recovery happens across all tiers**  
+  Over time, nearly all teams reach the playoffs regardless of starting position
 
 ---
 
 ## Interpretation
 
-The results suggest that the NBA’s 2019 lottery reform may be achieving its goal of reducing tanking incentives.
+While worse teams do take slightly longer to recover, they are not trapped at the bottom. Most teams return to competitiveness within a reasonable timeframe.
 
-While bad teams are still able to rebuild, finishing with the worst record no longer provides a strong advantage. Instead, teams with slightly better performance tend to return to competitiveness faster.
+This suggests that the current lottery system—despite reducing incentives for extreme tanking—still allows teams to rebuild effectively.
 
 ---
 
 ## Policy Insight
 
-Recent proposals to further flatten lottery odds aim to continue reducing incentives for extreme tanking.
+Recent NBA proposals aim to further flatten lottery odds.
 
 This analysis suggests:
-- Tanking is already less effective than before  
-- Further changes may reinforce this trend  
-- However, overly reducing draft advantages could make rebuilding more difficult for struggling teams  
+- Teams are already able to recover without relying heavily on top draft odds  
+- Further flattening may not trap bottom teams  
+- However, it could shift how teams approach rebuilding strategies  
 
 ---
 
 ## Dataset
 Includes:
 - Team performance (wins, win %, rank)
-- Lottery seed and actual draft pick
-- Pick ownership (kept vs conveyed)
-- Future outcomes (playoffs, years to recovery)
+- Lottery seed and draft outcomes
+- Time to playoff appearance
+- Tier classification (Bottom 3, Mid, Fringe)
 
-See `data_dictionary` for full column definitions.
+---
+
+## Visualizations
+- Distribution of years to playoffs  
+- Recovery time by lottery tier  
+- Cumulative recovery rates over time  
 
 ---
 
 ## Tools Used
 - Python (Pandas, NumPy)
+- Seaborn / Matplotlib
 - Jupyter Notebook
 
 ---
 
 ## Future Work
-- Compare pre-2019 vs post-2019 outcomes
-- Build predictive models for team success
-
----
-
-## 📬 Contact
-Open to feedback or collaboration on sports analytics and data science projects.
+- Compare pre-2019 vs post-2019 recovery timelines  
+- Analyze long-term success beyond playoff appearances  
